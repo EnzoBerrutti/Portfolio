@@ -1,0 +1,10 @@
+<div class="cont-nav">
+    <nav [ngClass]="{ 'scrolled': isScrolled === true }">
+        <a [ngClass]="{ 'active': currentSection === 'home' }" (click)="scrollTo('home')">Inicio</a>
+        <a [ngClass]="{ 'active': currentSection === 'aboutme' }" (click)="scrollTo('aboutme')">Sobre mi</a>
+        <a href="">Proyectos</a>
+        <a href="">Contacto</a>
+    </nav>
+    
+
+</div>

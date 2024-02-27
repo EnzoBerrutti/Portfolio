@@ -1,0 +1,14 @@
+.home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.cont-section{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
