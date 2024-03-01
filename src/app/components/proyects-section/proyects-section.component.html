@@ -1,25 +1,31 @@
 <section class="sect-project">
     <h2>Proyectos</h2>
-    <article class="cont-project">
-        <div class="cont-image">
-            <img class="image-albumize" src="assets\images\albumize.webp" alt="">
-
-        </div>
-        
-        <div class="desc-project">
-            <h3>Albumize - Pagina de reseñas de albumes de musica</h3>
-            <ul>
-                <li>Angular</li>
-                <li>Node.js</li>
-                <li>Bootstrap</li>
-            </ul>
-            <p>
-                Pagina de musica en la que puedes dejar una reseña o un puntaje a cualquier album.
-                Creada en un equipo de tres personas, utilizando Angular como lenguaje principal y consumiendo la API de Spotify.
-            </p>
-        </div>
+    <div class="cont-all">
+        <article class="cont-project" *ngFor="let project of project" >
+            <div class="cont-image" >
+                <img class="image-albumize" [src]="project.imagenUrl" alt="">
     
-    </article>
+            </div>
+            
+            <div class="desc-project">
+                <h3>{{project.titulo}}</h3>
+                <ul class="list-leng">
+                    <li class="li-leng" *ngFor="let tecnologia of project.tecnologias">{{ tecnologia }}</li>
+                    
+                </ul>
+                <p>{{project.descripcion}} </p>
+                <ul class="list-leng">
+                    <li class="li-code"><a [href]="project.codigoUrl"><i class="fa-brands fa-github" style="vertical-align: middle;"></i> Code</a></li>
+                    <li class="li-code"><a [href]="project.verUrl"><i class="fa-solid fa-link" style="vertical-align: middle;"></i> Preview</a></li>
+    
+                    
+                </ul>
+            </div>
+        
+        </article>
+
+    </div>
+    
 
 </section>
 

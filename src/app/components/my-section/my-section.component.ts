@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, transition, style, animate, keyframes} from '@angular/animations';
+import Typed from 'typed.js';
+
 
 
 @Component({
@@ -45,6 +47,15 @@ export class MySectionComponent implements OnInit{
         this.state = 'active'
       }
     },1500);
+
+    const options ={
+      strings: ['Programador Front End', 'Programador Back End'],
+      typeSpeed: 60,
+      backSpeed:60,
+      loop: true
+    }
+
+    const wri = new Typed('.auto-typed',options);
 
    
     

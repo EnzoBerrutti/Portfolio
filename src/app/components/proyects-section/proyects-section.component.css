@@ -1,38 +1,115 @@
 .sect-project{
     height: 100vh;
     width: 100%;
-    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+h2{
+    color: white;
+    font-size: 3rem;
+    font-family: "Rajdhani", sans-serif;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+  
+.cont-all{
+   display: flex;
+   flex-direction: column;
+   justify-content:space-evenly;
+   height: 90%;
+   
 
 }
 .cont-project{
     display: flex;
+    
+    
+ 
+}
+h3{
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: "Rajdhani", sans-serif;
+    
+}
+.list-leng{
+    display: flex;
+    
+    
+   
+}
+.li-leng{
+    margin-right: 5px;
+    color: rgb(94 234 212);
+    border-radius: 1rem;
+    padding: 0;
+    padding: 2px 12px 2px 12px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(45,212,191,.1);
+
+}
+.fa-github{
+    margin-right: 4px;
+    font-size: 20px;
+   
+}
+.fa-link{
+    margin-right: 4px;
+    font-size: 15px;
+    
+    
+    
+}
+.li-code{
+    
+    margin-right: 1rem;
+    color: rgb(94 234 212);
+    border-radius: 10px;
+    border-color:rgb(45, 90, 83);
+    padding: 0;
+    padding: 6px 14px 6px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(45,212,191,.1);
+    font-weight:500;
+    font-size: 18px;
 }
 .desc-project{
     color: white;
+    margin-left: 1rem;
+    width: 45%;
+    font-family: "Rajdhani", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
 
 }
-.cont-image{
-    width: 60rem;
-    width: 100%;
-    
-    border-width: 1px;
-    
-    border-color: rgb(31, 41, 55);
-    border-radius: 0.75rem;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: .5s;
 
-}
 .image-albumize{
     
+    width: 30rem;
+    border-width: 1px;
+    border-color: rgb(31, 41, 55);
     border-radius: 0.75rem;
-
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+    transform-origin: center;
     
-}
+} 
 .image-albumize:hover{
-    
-  
-  border-color: #555; /* Cambia el color del borde al pasar el cursor sobre la imagen */
-  background-color: rgba(128, 128, 128, 0.5);
+    border-color: rgb(62, 77, 100);
+    transform: scale(1.003);
+   
 }
+
