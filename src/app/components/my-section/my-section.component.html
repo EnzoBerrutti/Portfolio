@@ -24,8 +24,42 @@
         
     </div>
     <div class="image-cont">
-        <div class="circle"></div>
-        <img [@animation-avatar]='state' class="image-color" width="500px"  src="assets\images\ent-bro-edit.png" alt="">
+         <div class="circle"></div> 
+      <ng-tag-canvas [options]="{textFont: 'Rajdhani, sans-serif',weight: true, textColour: 'rgb(94 234 212)' ,
+          dragControl: false, radiusX: 2.3,
+          radiusY: 2.3,outlineColour:'none' , wheelZoom: false,clickToFront: 0,outlineMethod: 'none', outlineThickness: 0
+        ,bgOutlineThickness: 0,padding:0,imageMode:'image',imageScale:0.1}">
+            <a ngTag [weight]="25" ><img src="assets\images\kisspng-angularjs-typescript-node-js-javascript-letter-a-5abd8d1116f291.545252181522371857094.png" alt=""></a>
+           <a ngTag [weight]="25">Typescript</a>
+            <a ngTag [weight]="25">Java</a>
+            <a ngTag [weight]="25">MySQL</a>
+            <a ngTag [weight]="25"><img src="assets\images\javasc.png" alt=""></a>
+            <a ngTag [weight]="25"><img src="assets\images\html-logo.png" alt=""></a>
+            <a ngTag [weight]="25"><img src="assets\images\ccs.png" alt=""></a>
+            <a ngTag [weight]="25">C</a>
+            <a ngTag [weight]="24"><img src="assets\images\node-js.png" alt=""></a>
+           
+
+        </ng-tag-canvas> 
+      <!--   <ng-tag-canvas [options]="{textFont: 'Rajdhani, sans-serif',weight: true, textColour: 'rgb(94 234 212)' ,
+        dragControl: false, radiusX: 2.3,
+        radiusY: 2.3,outlineColour:'none' , wheelZoom: false,clickToFront: 0,outlineMethod: 'none', outlineThickness: 0, 
+        bgColour: 'rgba(45,212,191,.1)',bgOutlineThickness: 0,bgRadius: 50,padding:5}">
+          <a ngTag [weight]="25" >Angular</a>
+          <a ngTag [weight]="25">Typescript</a>
+          <a ngTag [weight]="25">Java</a>
+          <a ngTag [weight]="25">MySQL</a>
+          <a ngTag [weight]="25">JavaScript</a>
+          <a ngTag [weight]="25">HTML</a>
+          <a ngTag [weight]="25">CSS</a>
+          <a ngTag [weight]="25">C</a>
+          <a ngTag [weight]="24">Node.js</a>
+         
+
+      </ng-tag-canvas> -->
+        
+        
+        <!-- <img [@animation-avatar]='state' class="image-color" width="500px"  src="assets\images\ent-bro-edit.png" alt=""> -->
     </div>
     
    

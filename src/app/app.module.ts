@@ -9,6 +9,7 @@ import { MySectionComponent } from './components/my-section/my-section.component
 import { ProyectsSectionComponent } from './components/proyects-section/proyects-section.component';
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { TagCanvasModule } from 'ng-tagcanvas';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TagCanvasModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

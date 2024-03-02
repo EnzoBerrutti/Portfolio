@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { trigger, state, transition, style, animate, keyframes} from '@angular/animations';
 import Typed from 'typed.js';
+import { TagCanvasOptions } from 'ng-tagcanvas';
+
 
 
 
@@ -37,7 +39,8 @@ export class MySectionComponent implements OnInit{
 
 
 
-  constructor(){}
+  constructor() {}
+ 
   ngOnInit(): void {
     setInterval(()=>{
       if(this.state == 'active'){
@@ -57,9 +60,9 @@ export class MySectionComponent implements OnInit{
 
     const wri = new Typed('.auto-typed',options);
 
-   
-    
-      
   }
+
+ 
+  
 
 }
