@@ -8,12 +8,14 @@ import { ScrollServiceService } from 'src/app/services/scroll-service.service';
 })
 export class NavbarComponent {
   
-
   constructor(private scrollService: ScrollServiceService) {}
 
   scrollTo(section: string): void {
-    this.scrollService.scrollToSection(section);
-    this.currentSection = section;
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.currentSection = section;
+    }
   }
 
   currentSection: string | null = null;
@@ -23,30 +25,21 @@ export class NavbarComponent {
   checkScroll() {
     const homeSection = document.getElementById('home');
     const aboutMeSection = document.getElementById('aboutme');
-    const scrollPosition = window.scrollY || window.pageYOffset; // Usar window.scrollY si está disponible, de lo contrario, utilizar window.pageYOffset
+    const projectSection = document.getElementById('project');
+    const scrollPosition = window.scrollY || window.pageYOffset;
 
-    if (homeSection && aboutMeSection) {
+    if (homeSection && aboutMeSection && projectSection) {
       if (scrollPosition >= homeSection.offsetTop && scrollPosition < aboutMeSection.offsetTop) {
         this.currentSection = 'home';
-      } else if (scrollPosition >= aboutMeSection.offsetTop) {
+      } else if (scrollPosition >= aboutMeSection.offsetTop && scrollPosition < projectSection.offsetTop) {
         this.currentSection = 'aboutme';
+      } else if (scrollPosition >= projectSection.offsetTop) {
+        this.currentSection = 'project';
       } else {
         this.currentSection = null;
       }
     }
-    if(window.scrollY != 0){
-      this.isScrolled=true;
-    }else{
-      if(window.scrollY == 0){
-        this.isScrolled=false;
-      }
-    }
     
+    this.isScrolled = window.scrollY !== 0;
   }
-  
-  
-
-  
-
 }
-

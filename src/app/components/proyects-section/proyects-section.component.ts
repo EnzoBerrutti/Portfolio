@@ -16,30 +16,7 @@ import { Component } from '@angular/core';
 })
 export class ProyectsSectionComponent {
 
-  hoverState = 'initial';
-  toggleHoverState() {
-    this.hoverState = (this.hoverState === 'initial' ? 'hovered' : 'initial');
-  }
-
-
-  project=[
-    {
-      titulo: "Albumize - Página de reseñas de álbumes de música",
-      imagenUrl: "assets/images/albumize.webp",
-      tecnologias: ["Angular", "Node.js","TypeScript","HTML & CSS","Spotify API"],
-      descripcion: "Página de música en la que puedes dejar una reseña o un puntaje a cualquier álbum. Creada en un equipo de tres personas, utilizando Angular como herramienta principal y consumiendo la API de Spotify.",
-      codigoUrl: "url_del_codigo",
-      verUrl: "url_para_ver"
-    },
-    {
-      titulo: "Albumize - Página de reseñas de álbumes de música",
-      imagenUrl: "assets/images/albumize.webp",
-      tecnologias: ["Angular", "Node.js","TypeScript","HTML & CSS","Spotify API"],
-      descripcion: "Página de música en la que puedes dejar una reseña o un puntaje a cualquier álbum. Creada en un equipo de tres personas, utilizando Angular como herramienta principal y consumiendo la API de Spotify.",
-      codigoUrl: "url_del_codigo",
-      verUrl: "url_para_ver"
-    }
-  ]
+  
   constructor(){}
 
 }

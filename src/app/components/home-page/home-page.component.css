@@ -5,10 +5,12 @@
     
 }
 .cont-section{
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     
 
 }
-
+app-my-section,app-about-section,app-proyects-section{
+    width: 100%;
+}

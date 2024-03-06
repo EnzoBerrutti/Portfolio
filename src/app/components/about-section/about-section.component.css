@@ -2,33 +2,76 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    
-   
-}
-.subtitle-about{
-    color: white;
-    display: flex;
     align-items: center;
-    font-family:"Onest", sans-serif;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-
-    font-size: 2rem;
-    font-weight: 600;
-    
+    justify-content: space-evenly;
+  
 }
-.fa-address-card{
-    margin-right: 1.5rem;
+h2{
+    color: rgb(94 234 212);
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+.subtitle{
+    color: white;
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.image-about{
+    width: 35rem;
 }
 
 .info-about{
-    font-family:"Onest", sans-serif;
     color: white;
-    width: 40rem;
+    width: 35rem; 
+}
+
+.desc-about-1{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-family: "Rajdhani", sans-serif;
+    text-wrap: pretty;
+}
+
+.years-info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+span{
+    font-size: 3rem;
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    font-weight: bold;
+    color: rgb(94 234 212);
+    
     
 }
-.desc-about{
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
+.info-data{
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+button{
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 28px 12px 28px;
+    color: rgb(94 234 212);
+    border-radius: 30px;
+    margin-top: 2rem;
+   
+    background-color: rgba(45,212,191,.1)
+}
+button:hover{
+    background-color: rgb(94 234 212); 
+    color: black;
+}
+
+.fa-download{
+    font-size: 1rem;
 }

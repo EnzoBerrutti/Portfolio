@@ -1,29 +1,31 @@
 <section class="sect-project">
-    <h2>Proyectos</h2>
-    <div class="cont-all">
-        <article class="cont-project" *ngFor="let project of project" >
-            <div class="cont-image" >
-                <img class="image-albumize" [src]="project.imagenUrl" alt="">
     
+    <div class="cont-all">
+        <div class="container-box">
+            <div class="small-box">
+                <h2>Proyectos</h2>
+
+            </div>
+            <div class="large-box">
+                <img class="img-albumize" src="assets\images\albumize-normal-modified-2.png" alt="">
+            </div>
+
+            
+
+        </div>
+        <div class="container-box">
+            <div class="large-box">
+
+            </div>
+            <div class="small-box">
+
             </div>
             
-            <div class="desc-project">
-                <h3>{{project.titulo}}</h3>
-                <ul class="list-leng">
-                    <li class="li-leng" *ngFor="let tecnologia of project.tecnologias">{{ tecnologia }}</li>
-                    
-                </ul>
-                <p>{{project.descripcion}} </p>
-                <ul class="list-leng">
-                    <li class="li-code"><a [href]="project.codigoUrl"><i class="fa-brands fa-github" style="vertical-align: middle;"></i> Code</a></li>
-                    <li class="li-code"><a [href]="project.verUrl"><i class="fa-solid fa-link" style="vertical-align: middle;"></i> Preview</a></li>
-    
-                    
-                </ul>
-            </div>
-        
-        </article>
 
+          
+            
+
+        </div>
     </div>
     
 
