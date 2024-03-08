@@ -16,6 +16,16 @@ import { Component } from '@angular/core';
 })
 export class ProyectsSectionComponent {
 
+  mostrarDescripcion: boolean = false;
+
+  mostrarTexto() {
+    this.mostrarDescripcion = true;
+  }
+
+  ocultarTexto() {
+    this.mostrarDescripcion = false;
+  }
+
   
   constructor(){}
 

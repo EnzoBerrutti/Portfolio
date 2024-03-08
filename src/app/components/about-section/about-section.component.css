@@ -65,7 +65,7 @@ button{
     border-radius: 30px;
     margin-top: 2rem;
    
-    background-color: rgba(45,212,191,.1)
+    background-color: rgba(45,212,191,.1);
 }
 button:hover{
     background-color: rgb(94 234 212); 
