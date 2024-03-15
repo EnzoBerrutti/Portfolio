@@ -69,7 +69,7 @@
 .my-sect {
     display: flex;
     height: 100vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
  
@@ -79,7 +79,7 @@
     width: 40rem;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-left: 10rem;  
 }
@@ -119,6 +119,11 @@
     top: 110px;
    
 }
+.image-color-2{
+    position: absolute;
+    
+   
+}
 ng-tag-canvas{
     position: absolute;
     width: 30rem;
@@ -135,6 +140,7 @@ ng-tag-canvas{
 
 .contact-cv{
     display: flex;
+    justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 0;
@@ -142,13 +148,13 @@ ng-tag-canvas{
 }
 .contact,.cv{
     
-    margin-right: 1rem;
+    
     border-radius: 1.5rem;
     background-color:rgba(45,212,191,.1) ;
     color: rgb(94 234 212);
     padding: 12px 32px 12px 32px;
     font-family: 'Ignis et Glacies Sharp', sans-serif;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: bold;
 }
 .contact:hover,.cv:hover{
@@ -176,7 +182,7 @@ ng-tag-canvas{
 .buttons{
     display: flex;
     justify-content: space-around;
-    width: 10rem;
+    
 }
 
 .fa-linkedin-in,.fa-github,.fa-file-arrow-down{
@@ -192,4 +198,8 @@ ng-tag-canvas{
     cursor: pointer;
     margin-right: 1rem;
 
+}
+.fa-linkedin-in:hover,.fa-github:hover,.fa-file-arrow-down:hover{
+    background-color: rgb(94 234 212);
+    color: black;
 }

@@ -1,39 +1,36 @@
-<section class="sect-project">
-    
-    <div class="cont-all">
-        <h1>Proyectos</h1>
-        
-        <div class="container-image" >
-            <img class="image" src="assets\images\albumize-nonav-cuad.jpg" >
-            <!-- <div *ngIf="mostrarDescripcion" class="descripcion">
-                <div class="desc">
-                    
-                    <h3>Albumize</h3>
-                    <p>Pagina de reseñas de albumes de Musica. Creada con Angular 
-                        como lenguaje principal y consumiendo la API de Spotify.</p>
-                    <ul>
-                        <li class="li-leng">Angular</li>
-                        <li class="li-leng">Node.js</li>
-                        <li class="li-leng">Spotify API</li>
-                    </ul>
-                     <ul>
-                        <li class="li-code"><i class="fa-brands fa-github"></i>Codigo </li>
-                        <li class="li-code"><i class="fa-solid fa-link"></i>Ver </li>
-                        
-                    </ul> 
+<section class="sect-project" id="project">
 
-                </div>
-               
-            </div> -->
-          </div>
-          
-        
+    <div class="container-title">
+        <h2>Proyectos</h2>
+        <hr>
 
-
-
-       
     </div>
-    
+    <div class="container-project" *ngFor="let proyecto of proyectos; let i = index" [ngClass]="{'imagen-izquierda': i % 2 === 0, 'imagen-derecha': i % 2 !== 0}">
+        <div class="cont-image">
+            <img [src]="proyecto.imagenUrl" alt="">
+
+        </div>
+        <div class="container-desc">
+            <h6>Proyecto</h6>
+            <h4>{{ proyecto.title }}</h4>
+            <div class="cont-desc">
+                <p class="desc">{{ proyecto.description }}</p>
+            </div>
+            <ul>
+                <li *ngFor="let lenguaje of proyecto.lengList" class="li-leng">{{ lenguaje }}</li>
+                
+            </ul>
+            <ul>
+                <li class="li-code"><i class="fa-brands fa-github"></i></li>
+                <li class="li-code"><i class="fa-solid fa-arrow-up-right-from-square"></i></li>
+                
+            </ul> 
+            
+
+        </div>
+        
+
+    </div>
 
 </section>
 

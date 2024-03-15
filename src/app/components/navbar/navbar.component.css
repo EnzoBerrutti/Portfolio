@@ -1,37 +1,102 @@
-a{
+.btns{
     color: rgb(255 255 255);
-    font-family:"Onest", sans-serif;
-    
-    margin: 0.3rem 0.6rem 0.3rem 0.6rem;
-    font-size: 0.9rem;
+    font-family: "Rajdhani", sans-serif;
+    padding-right: 20px;
+    font-size: 1.1rem;
     font-weight: 600;
-    
-    
+ 
 }
-nav{
-    height: 2rem;
-    position: fixed;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    margin-top: 0.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+.btns-2{
+    color: rgb(255 255 255);
+    font-family: "Rajdhani", sans-serif;
     
+    font-size: 1.1rem;
+    font-weight: 600;
+ 
+}
 
+a:hover{
+    color:rgb(94 234 212);
 }
 .active{
-    color:rgb(0, 255, 248) ;
+    color:rgb(94 234 212);
     
 }
 .scrolled{
     background-color: rgba(45,212,191,0.2);
-    border-radius: 1rem;
-    
-    
+    border-radius: 20px;
+    background: rgba(45,212,191,0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
 }
-.cont-nav{
-    width:100%;
+.container-nav{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+
+
+}
+nav{
+    
+    
+    
+    cursor: pointer;
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* margin-top: 0.5rem; */
+    border-radius: 20px;
+
 }
+.cont-all{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+h4{
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    background-image: linear-gradient(to left, #229b8c, #32ae9e, #41c2af, #50d6c2, #5eead4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+}
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    background-color: rgb(94 234 212);
+    border: 1px solid rgb(94 234 212);
+}
+.container-button{
+    width: 33.33%;
+    /* margin-top: 0.5rem; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+button{
+    
+    font-family: 'Ignis et Glacies Sharp', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-image: linear-gradient(to left, #229b8c, #32ae9e, #41c2af, #50d6c2, #5eead4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+    
+}
+
