@@ -1,16 +1,75 @@
 .home{
     width: 100%;
     display: flex;
-    justify-content: center;
     
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+app-my-section,app-about-section,app-proyects-section{
+    width: 100%;
+}
+app-navbar{
+    width: 100%;
+}
+
+.container-all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .cont-section{
     width: 60%;
     display: flex;
     flex-direction: column;
-    
-
+   
 }
-app-my-section,app-about-section,app-proyects-section{
-    width: 100%;
+.side-navbar-left{
+    
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    width: 40px;
+}
+.container-mail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;   
+}
+.container-mail a{
+    writing-mode: vertical-rl;
+    color: white;
+    letter-spacing: 0.1em;
+    margin: 0;
+    margin: 20px auto;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 15px;
+}
+
+.container-mail::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    background-color: white;
+    margin: 0px auto;
+}
+
+
+.side-navbar-right{
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    width: 40px;
+}
+
+app-about-section{
+    display: flex;
+    justify-content: center;
 }

@@ -1,19 +1,17 @@
-<div class="cont-all">
+<nav class="cont-all" [ngClass]="{ 'show-navbar': isScrolledUp }">
 
-    <div class="image-developer">
-        <h4>EB</h4>
-        <!-- <img src="assets\icons\profile-png.png" alt=""> -->
-    </div>
-        <div class="container-nav">
-            <nav >
-                <a [ngClass]="{ 'active': currentSection === 'home' }" (click)="scrollTo('home')" class="btns">Inicio</a>
-                <a [ngClass]="{ 'active': currentSection === 'aboutme' }" (click)="scrollTo('aboutme')" class="btns">Sobre mi</a>
-                <a [ngClass]="{ 'active': currentSection === 'project' }" (click)="scrollTo('project')" class="btns">Proyectos</a>
-                <a class="btns-2">Contacto</a>
-            </nav>
+    <div class="octagono"><span>E</span></div>
+
+    <div class="container-nav">
+        <div class="list-nav" >
+            <a [ngClass]="{ 'active': currentSection === 'home' }" (click)="scrollTo('home')" class="btns">Inicio</a>
+            <a [ngClass]="{ 'active': currentSection === 'aboutme' }" (click)="scrollTo('aboutme')" class="btns">Sobre mi</a>
+            <a [ngClass]="{ 'active': currentSection === 'project' }" (click)="scrollTo('project')" class="btns">Proyectos</a>
+            <a class="btns-2">Contacto</a>
         </div>
+    </div>
    
     
     
 
-</div>
+</nav>

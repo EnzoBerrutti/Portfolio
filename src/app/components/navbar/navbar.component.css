@@ -1,19 +1,41 @@
+.cont-all{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: -100px;
+    transition: top .3s ease-in-out;
+    padding-bottom: 15px;
+
+    
+}
+.show-navbar{
+    top: 0;
+    background: linear-gradient(135deg, var(--background-blue), rgba(var(--background-blue), 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 20;
+}
+
 .btns{
     color: rgb(255 255 255);
     font-family: "Rajdhani", sans-serif;
-    padding-right: 20px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 0.75rem 1rem;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: 400;
  
 }
 .btns-2{
-    color: rgb(255 255 255);
+    color: rgb(94 234 212);
     font-family: "Rajdhani", sans-serif;
-    
-    font-size: 1.1rem;
-    font-weight: 600;
- 
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgb(94 234 212);
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 400;
 }
+
 
 a:hover{
     color:rgb(94 234 212);
@@ -40,35 +62,40 @@ a:hover{
 
 
 }
-nav{
-    
-    
-    
+.list-nav{
+
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 0.5rem; */
-    border-radius: 20px;
+    margin-top: 15px;
+    margin-right: 40px;
+
 
 }
-.cont-all{
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    
+.octagono{
+    margin-left: 40px;
+    margin-top: 15px;
 }
 
-h4{
+
+
+
+
+
+span{
     font-family: 'Ignis et Glacies Sharp', sans-serif;
     font-weight: bold;
-    font-size: 25px;
-    background-image: linear-gradient(to left, #229b8c, #32ae9e, #41c2af, #50d6c2, #5eead4);
-    background-clip: text;
+    font-size: 30px;
+    color: rgb(94 234 212);
+    /* background-image: linear-gradient(to left, #229b8c, #32ae9e, #41c2af, #50d6c2, #5eead4); */
+    /* background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -moz-text-fill-color:transparent;
+    -moz-text-fill-color:transparent; */
+
+    
 }
 img{
     width: 50px;

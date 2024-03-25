@@ -10,6 +10,9 @@ import { ProyectsSectionComponent } from './components/proyects-section/proyects
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { TagCanvasModule } from 'ng-tagcanvas';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FinalSectionComponent } from './components/final-section/final-section.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { TagCanvasModule } from 'ng-tagcanvas';
     HomePageComponent,
     MySectionComponent,
     ProyectsSectionComponent,
-    AboutSectionComponent
+    AboutSectionComponent,
+    SidebarComponent,
+    FinalSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

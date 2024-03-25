@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ScrollServiceService } from 'src/app/services/scroll-service.service';
 
 @Component({
@@ -6,9 +6,14 @@ import { ScrollServiceService } from 'src/app/services/scroll-service.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit{
   
   constructor(private scrollService: ScrollServiceService) {}
+
+  ngOnInit(): void {
+    this.isScrolledUp = window.scrollY === 0;
+    this.checkScroll();
+  }
 
   scrollTo(section: string): void {
     const element = document.getElementById(section);
@@ -20,8 +25,18 @@ export class NavbarComponent {
 
   currentSection: string | null = null;
   isScrolled = false;
+  isScrolledUp: boolean = true;
+  lastScrollTop: number = 0;
+
+
 
   @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    this.isScrolledUp = currentScroll === 0 || (currentScroll < this.lastScrollTop && currentScroll > 0);
+    this.lastScrollTop = currentScroll;
+    this.checkScroll();
+  }
   checkScroll() {
     const homeSection = document.getElementById('home');
     const aboutMeSection = document.getElementById('aboutme');
@@ -39,7 +54,6 @@ export class NavbarComponent {
         this.currentSection = null;
       }
     }
-    
-    this.isScrolled = window.scrollY !== 0;
   }
+ 
 }

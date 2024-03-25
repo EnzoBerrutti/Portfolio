@@ -6,12 +6,12 @@
 @import url('https://fonts.cdnfonts.com/css/trivial');
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;500;700;1000&family=Onest:wght@100..900&display=swap');
-
+@import "colors.css";
 body{
  /* background: radial-gradient(ellipse 80% 80% at 50% 50%, rgb(15, 23, 42), rgb(0, 0, 0)); */
  /* background: radial-gradient(ellipse 40% 40% at 50% -20%, rgb(15, 23, 42), rgb(0, 3, 12)); */
  /*  background-color: rgb(7, 7, 9); */
- background-color: #070d1b;
+  background-color: #070d1b;
 }
 html {
     box-sizing: border-box;
