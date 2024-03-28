@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-proyects-section',
@@ -11,7 +11,14 @@ import { Component } from '@angular/core';
       state('hovered', style({ transform: 'scale(1.01)' })),
       transition('initial => hovered', animate('0.3s ease-in')),
       transition('hovered => initial', animate('0.3s ease-out'))
+    ]),
+    trigger('fadeInAnimation', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-20px)' }),
+        animate('500ms', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
     ])
+  
   ]
 })
 export class ProyectsSectionComponent {
@@ -28,7 +35,7 @@ export class ProyectsSectionComponent {
   proyectos = [
   {
     title: 'Albumize',
-    description: 'La página web es una plataforma de reseñas de álbumes musicales, donde los usuarios pueden dejar comentarios y puntuaciones para cualquier álbum de música.',
+    description: 'La página web es una plataforma de reseñas de álbumes musicales donde los usuarios pueden dejar comentarios y puntuaciones para cualquier álbum de música.',
     lengList: ['Angular', 'TypeScript', 'HTML', 'CSS','Spotify API'],
     imagenUrl: 'assets/images/albumize-nonav-cuad.jpg'
   },
@@ -47,8 +54,29 @@ export class ProyectsSectionComponent {
 
 
 ];
+@ViewChildren('projectItem') projectItems!: QueryList<ElementRef>;
 
-  
-  constructor(){}
+  constructor(private renderer: Renderer2) {}
+
+  ngAfterViewInit(): void {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2 // 20% visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.renderer.addClass(entry.target, 'visible');
+        }
+      });
+    }, options);
+
+    this.projectItems.forEach(item => {
+      observer.observe(item.nativeElement);
+    });
+  }
+
 
 }

@@ -1,7 +1,8 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
-import { trigger, state, transition, style, animate, keyframes} from '@angular/animations';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { trigger, state, transition, style, animate, keyframes, query, AnimationBuilder} from '@angular/animations';
 import Typed from 'typed.js';
 import { TagCanvasOptions } from 'ng-tagcanvas';
+import { delay1Animation, delay2Animation, delay3Animation, delay4Animation, delay5Animation, delay6Animation, fadeInAnimation } from 'src/app/services/animations/fade-in.animations';
 
 
 
@@ -31,17 +32,72 @@ import { TagCanvasOptions } from 'ng-tagcanvas';
       transition('inactive=>active',animate('3000ms ease-in')),
       transition('active=>inactive',animate('3000ms ease-out'))
     ]),
+
+    
+    trigger('fadeIn', [
+      state('void', style({
+        opacity: 0,
+        transform: 'translateY(-90px)' // Mueve el elemento hacia arriba para la animación de arriba hacia abajo
+      })),
+      transition('void => *', [
+        animate('500ms ease-out') // Ajusta la duración de la animación según tus necesidades
+      ])
+    ])
   ]
+
 })
-export class MySectionComponent implements OnInit{
 
+
+export class MySectionComponent implements OnInit, AfterViewInit{
+
+
+  @ViewChild('hola') holaElement!: ElementRef;
+  @ViewChild('enzo') enzoElement!: ElementRef;
+  @ViewChild('berrutti') berruttiElement!: ElementRef;
+  @ViewChild('fullstack') fullstackElement!: ElementRef;
+  @ViewChild('personaltext') personaltextElement!: ElementRef;
+  @ViewChild('contactcv') contactcvElement!: ElementRef;
+  @ViewChild('contfollow') contfollowElement!: ElementRef;
+  @ViewChild('imagecont') imagecontElement!: ElementRef;
+
+
+  constructor(private renderer: Renderer2) { }
+  
   state:string = 'inactive';
+  private applyAnimation(element: HTMLElement): void {
+    this.renderer.addClass(element, 'visible');
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.applyAnimation(this.holaElement.nativeElement);
+      setTimeout(() => {
+        this.applyAnimation(this.enzoElement.nativeElement);
+        setTimeout(() => {
+          this.applyAnimation(this.berruttiElement.nativeElement);
+          setTimeout(() => {
+            this.applyAnimation(this.fullstackElement.nativeElement);
+            setTimeout(() => {
+              this.applyAnimation(this.personaltextElement.nativeElement);
+              setTimeout(() => {
+                this.applyAnimation(this.contactcvElement.nativeElement);
+                setTimeout(() => {
+                  this.applyAnimation(this.contfollowElement.nativeElement);
+                  setTimeout(() => {
+                    this.applyAnimation(this.imagecontElement.nativeElement);
+                  }, 200);
+                }, 200);
+              }, 200);
+            }, 200);
+          }, 200);
+        }, 200);
+      }, 200);
+    }, 200);
+  }
 
 
-
-  constructor() {}
- 
   ngOnInit(): void {
+
     setInterval(()=>{
       if(this.state == 'active'){
         this.state = 'inactive'
@@ -61,6 +117,8 @@ export class MySectionComponent implements OnInit{
     const wri = new Typed('.auto-typed',options);
 
   }
+
+ 
 
  
   

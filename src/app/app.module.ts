@@ -13,6 +13,7 @@ import { TagCanvasModule } from 'ng-tagcanvas';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FinalSectionComponent } from './components/final-section/final-section.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarRightComponent } from './components/sidebar-right/sidebar-right.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutSectionComponent,
     SidebarComponent,
     FinalSectionComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarRightComponent
   ],
   imports: [
     BrowserModule,

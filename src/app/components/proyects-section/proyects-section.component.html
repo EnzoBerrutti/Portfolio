@@ -1,11 +1,11 @@
 <section class="sect-project" id="project">
 
-    <div class="container-title">
-        <h2>Proyectos</h2>
-        <hr>
-
+    <div class="container-title" #projectItem >
+        <h2><i class="fa-regular fa-circle"></i>Proyectos</h2>
+        
     </div>
-    <div class="container-project" *ngFor="let proyecto of proyectos; let i = index" [ngClass]="{'imagen-izquierda': i % 2 === 0, 'imagen-derecha': i % 2 !== 0}">
+    <div #projectItem class="container-project" *ngFor="let proyecto of proyectos; let i = index" [ngClass]="{'imagen-izquierda': i % 2 === 0, 'imagen-derecha': i % 2 !== 0}">
+        
         <div class="cont-image">
             <img [src]="proyecto.imagenUrl" alt="">
 

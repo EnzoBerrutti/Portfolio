@@ -1,20 +1,22 @@
-<section class="my-sect" id="home">
+<section class="my-sect" id="home" >
     <div class="cont-desc">
-        <p class="hola">Hola, soy</p>
+        <p class="hola" #hola>Hola, soy</p>
+        <p class="name-enzo" #enzo>Enzo</p>
+        <p class="name-berrutti" #berrutti>Berrutti</p>
+
         
-        <p class="name-enzo">Enzo</p>
-        <p class="name-berrutti">Berrutti</p>
+
         <p></p>
-        <p class="full-stack"><span class="auto-typed"></span></p>
+        <p class="full-stack" #fullstack><span class="auto-typed"></span></p>
         
-        <p class="personal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae asperiores fuga recusandae, adipisci blanditiis rerum sequi non sed molestias veritatis, accusamus vero cum! Sint dicta velit nulla nemo vero rem.</p>
+        <p class="personal-text" #personaltext>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae asperiores fuga recusandae, adipisci blanditiis rerum sequi non sed molestias veritatis, accusamus vero cum! Sint dicta velit nulla nemo vero rem.</p>
         
-        <div class="contact-cv">
+        <div class="contact-cv" #contactcv>
             <button class="contact">Contactame</button>
             <button class="cv">Mi Portfolio</button>
 
         </div>
-        <div class="cont-follow">
+        <div class="cont-follow" #contfollow>
             <i class="fa-brands fa-github"></i>
             <i class="fa-brands fa-linkedin-in"></i> 
             <i class="fa-solid fa-file-arrow-down"></i>               
@@ -22,12 +24,12 @@
         
         
     </div>
-    <div class="image-cont">
+    <div class="image-cont" #imagecont>
          <div class="circle"></div> 
      
         
-         <img [@animation-avatar]='state' class="image-color-2" width="500px"  src="assets\images\hero-modified.webp" alt="">
-        <!-- <img [@animation-avatar]='state' class="image-color" width="500px"  src="assets\images\ent-bro-edit.png" alt=""> -->
+         <img [@animation-avatar]='state' class="image-color-2" width="500px"  src="assets\images\hero-modified.webp" alt="" >
+        
     </div>
     
    

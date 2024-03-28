@@ -43,13 +43,13 @@ export class NavbarComponent implements OnInit{
     const projectSection = document.getElementById('project');
     const scrollPosition = window.scrollY || window.pageYOffset;
 
-    if (homeSection && aboutMeSection && projectSection) {
-      if (scrollPosition >= homeSection.offsetTop && scrollPosition < aboutMeSection.offsetTop) {
+    if (homeSection && projectSection && aboutMeSection) {
+      if (scrollPosition >= homeSection.offsetTop && scrollPosition < projectSection.offsetTop) {
         this.currentSection = 'home';
-      } else if (scrollPosition >= aboutMeSection.offsetTop && scrollPosition < projectSection.offsetTop) {
-        this.currentSection = 'aboutme';
-      } else if (scrollPosition >= projectSection.offsetTop) {
+      } else if (scrollPosition >= projectSection.offsetTop && scrollPosition < aboutMeSection.offsetTop) {
         this.currentSection = 'project';
+      } else if (scrollPosition >= aboutMeSection.offsetTop) {
+        this.currentSection = 'aboutme';
       } else {
         this.currentSection = null;
       }
