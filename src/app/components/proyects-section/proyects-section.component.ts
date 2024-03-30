@@ -37,19 +37,25 @@ export class ProyectsSectionComponent {
     title: 'Albumize',
     description: 'La página web es una plataforma de reseñas de álbumes musicales donde los usuarios pueden dejar comentarios y puntuaciones para cualquier álbum de música.',
     lengList: ['Angular', 'TypeScript', 'HTML', 'CSS','Spotify API'],
-    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg'
+    imagenUrl: 'assets/images/albumize-final.jpg',
+    gitURL:'https://github.com/EnzoBerrutti/albumize',
+    pageURL:'https://albumize.vercel.app/home'
   },
   {
     title: 'Nerflis',
     description: 'Esta plataforma es un servicio de streaming desarrollado en Java y JSON, que ofrece a los usuarios acceso a un extenso catálogo de películas y series.',
     lengList: ['Java', 'JSON'],
-    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg'
+    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg',
+    gitURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III',
+    pageURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III'
   },
   {
     title: 'Mi Portfolio',
     description: 'Portfolio personal creado utilizando tecnologías modernas como Angular, CSS, HTML y TypeScript. Este portfolio es una muestra de mi trabajo y experiencia en el desarrollo web. ',
     lengList: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg'
+    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg',
+    gitURL:'https://github.com/EnzoBerrutti/Portfolio',
+    pageURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III'
   }
 
 

@@ -3,6 +3,7 @@ import { trigger, state, transition, style, animate, keyframes, query, Animation
 import Typed from 'typed.js';
 import { TagCanvasOptions } from 'ng-tagcanvas';
 import { delay1Animation, delay2Animation, delay3Animation, delay4Animation, delay5Animation, delay6Animation, fadeInAnimation } from 'src/app/services/animations/fade-in.animations';
+import { Router } from '@angular/router';
 
 
 
@@ -62,6 +63,18 @@ export class MySectionComponent implements OnInit, AfterViewInit{
 
 
   constructor(private renderer: Renderer2) { }
+
+  scrollTo(section: string): void {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.currentSection = section;
+    }
+  }
+
+  currentSection: string | null = null;
+
+ 
   
   state:string = 'inactive';
   private applyAnimation(element: HTMLElement): void {
@@ -74,18 +87,15 @@ export class MySectionComponent implements OnInit, AfterViewInit{
       setTimeout(() => {
         this.applyAnimation(this.enzoElement.nativeElement);
         setTimeout(() => {
-          this.applyAnimation(this.berruttiElement.nativeElement);
+          this.applyAnimation(this.fullstackElement.nativeElement);
           setTimeout(() => {
-            this.applyAnimation(this.fullstackElement.nativeElement);
+            this.applyAnimation(this.personaltextElement.nativeElement);
             setTimeout(() => {
-              this.applyAnimation(this.personaltextElement.nativeElement);
+              this.applyAnimation(this.contactcvElement.nativeElement);
               setTimeout(() => {
-                this.applyAnimation(this.contactcvElement.nativeElement);
+                this.applyAnimation(this.contfollowElement.nativeElement);
                 setTimeout(() => {
-                  this.applyAnimation(this.contfollowElement.nativeElement);
-                  setTimeout(() => {
-                    this.applyAnimation(this.imagecontElement.nativeElement);
-                  }, 200);
+                  this.applyAnimation(this.imagecontElement.nativeElement);
                 }, 200);
               }, 200);
             }, 200);
@@ -93,6 +103,16 @@ export class MySectionComponent implements OnInit, AfterViewInit{
         }, 200);
       }, 200);
     }, 200);
+  }
+
+  downloadFile() {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'assets/pdf/CV-SPR.pdf');
+    link.setAttribute('download', 'CV-SPR.pdf');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   }
 
 

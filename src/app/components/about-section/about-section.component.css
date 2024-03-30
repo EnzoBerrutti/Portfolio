@@ -1,13 +1,9 @@
 #aboutme{
     
-    
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-   
-    
-    
   
 }
 
@@ -149,4 +145,161 @@ button:hover{
 
 .fa-download{
     font-size: 1rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+
+    .desc-about-1{
+        margin-bottom: 1rem;
+        font-size: 1.15rem;
+        font-family: "Rajdhani", sans-serif;
+        
+        
+    }
+    .desc-about-2{
+        
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+        font-family: "Rajdhani", sans-serif;
+       
+        
+    }
+    button{
+        font-family: 'Ignis et Glacies Sharp', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 12px 24px 12px 24px;
+        color: var(--ligth-green);
+        border-radius: 30px;
+        margin-top: 2rem;
+       
+        background-color: rgba(45,212,191,.1);
+    }
+    .info-data{
+        font-family: 'Ignis et Glacies Sharp', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--light-white);
+    }
+    span{
+        font-size: 2.5rem;
+        font-family: 'Ignis et Glacies Sharp', sans-serif;
+        font-weight: bold;
+        color: var(--ligth-green);
+        
+        
+    }
+    .image-about{
+        width: 21rem;
+        border: 1px solid var(--ligth-green);
+        border-radius: 3px;
+        margin-top: 9px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 768px){
+    #aboutme{
+    
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        padding-top: 15rem;
+      
+    }
+
+    .container-all{
+        width: 350px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .cont-title{
+        display: flex;
+        align-items: center;
+        width: 350px;
+        
+        
+        
+    }
+    .fa-circle{
+        font-size: 15px;
+        margin-right: 10px;
+        vertical-align: middle;
+        color: var(--ligth-green);
+    
+    
+    }
+    h2{
+        /* color: var(--ligth-green); */
+        color: var(--light-white);
+        font-family: "Rajdhani", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        
+        width: fit-content;
+        
+    }
+    h2::after{
+        
+        width: 197px;
+       
+      
+        
+    }
+    .info-about{
+    
+        width: 350px;
+        margin-bottom: 2rem; 
+        
+    }
+
+    .subtitle{
+       
+        font-size: 1.3rem;
+        
+    }
+    .desc-about-1{
+        
+        font-size: 1.1rem;
+        
+        
+        
+    }
+    .desc-about-2{
+        
+        font-size: 1.1rem;
+        
+       
+        
+    }
+    
+    span{
+        font-size: 2.2rem;
+        
+        
+        
+    }
+    .info-data{
+        
+        font-size: 1rem;
+        
+       
+    }
+    .image-about{
+        width: 20rem;
+        border: 1px solid var(--ligth-green);
+        border-radius: 3px;
+        
+    }
+
+
+
 }

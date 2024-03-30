@@ -12,22 +12,37 @@
         </div>
         <div class="container-desc">
             
-            <h6>Proyecto</h6>
-            <div class="title-desc">
+
+            <div>
+                <h6>Proyecto</h6>
+                <div class="title-desc">
                 <h4>{{ proyecto.title }}</h4>
+
+                </div>
+
+            </div>
+            <div>
+                <div class="cont-desc">
+                    <p class="desc">{{ proyecto.description }}</p>
+                </div>
+                <ul>
+                    <li *ngFor="let lenguaje of proyecto.lengList" class="li-leng">{{ lenguaje }}</li>
+                    
+                </ul>
 
             </div>
             
-            <div class="cont-desc">
-                <p class="desc">{{ proyecto.description }}</p>
-            </div>
+            
+            
             <ul>
-                <li *ngFor="let lenguaje of proyecto.lengList" class="li-leng">{{ lenguaje }}</li>
-                
-            </ul>
-            <ul>
-                <li class="li-code"><i class="fa-brands fa-github"></i></li>
-                <li class="li-code"><i class="fa-solid fa-arrow-up-right-from-square"></i></li>
+                <li class="li-code"><a [href]="proyecto.gitURL"  target="_blank">
+                    <i class="fa-brands fa-github"></i></a>
+                </li>
+                <li class="li-code">
+                    <a [href]="proyecto.pageURL"  target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    
+                </li>
                 
             </ul> 
             

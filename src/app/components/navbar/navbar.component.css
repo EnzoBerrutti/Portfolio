@@ -16,9 +16,16 @@
     -webkit-backdrop-filter: blur(10px);
     z-index: 20;
 }
+.fa-circle{
+    font-size: 8px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: var(--ligth-green);
 
+
+}
 .btns{
-    color: rgb(255 255 255);
+    color: var(--light-white);
     font-family: "Rajdhani", sans-serif;
     padding: 0.75rem 1rem;
     margin-right: 10px;
@@ -79,8 +86,6 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
-
 
 }
 .list-nav{
@@ -97,12 +102,9 @@ a:hover{
 .octagono{
     margin-left: 40px;
     margin-top: 15px;
+   
+
 }
-
-
-
-
-
 
 span{
     font-family: 'Ignis et Glacies Sharp', sans-serif;
@@ -114,9 +116,7 @@ span{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -moz-text-fill-color:transparent; */
-
-    
+    -moz-text-fill-color:transparent; */  
 }
 img{
     width: 50px;
@@ -148,3 +148,81 @@ button{
     
 }
 
+
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+    .container-nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    
+    }
+    .fa-circle{
+        font-size: 8px;
+        margin-right: 6px;
+        vertical-align: middle;
+        color: var(--ligth-green);
+    
+    
+    }
+    .btns{
+        color: var(--light-white);
+        font-family: "Rajdhani", sans-serif;
+        padding: 0.75rem 1rem;
+        margin-right: 2px;
+        font-size: 17px;
+        font-weight: 400;
+     
+    }
+    
+}
+
+@media only screen and (max-width: 768px){
+    
+    .fa-circle{
+        font-size: 8px;
+        margin-right: 2px;
+        vertical-align: middle;
+        color: var(--ligth-green);
+    
+    
+    }
+    .btns{
+        color: var(--light-white);
+        font-family: "Rajdhani", sans-serif;
+        padding: 0.3rem 0rem 0.3rem 0rem;
+        margin-right: 5px;
+        font-size: 17px;
+        font-weight: 400;
+     
+    }
+    .octagono{
+        margin-left: 15px;
+        margin-top: 15px;
+        display: none;
+       
+    
+    }
+    .list-nav{
+
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 350px;
+        margin-top: 15px;
+        margin-right: 0;
+        margin-left: 0;
+    
+    
+    }
+    .container-nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+
+}

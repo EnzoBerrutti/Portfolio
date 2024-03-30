@@ -98,3 +98,35 @@ p{
     display: flex;
     justify-content: center;
 }
+
+
+@media only screen and (max-width: 768px){
+    .container-all{
+        
+        padding-bottom: 17rem;
+        padding-top: 25rem;
+    }
+    .container-final{
+  
+        width: 350px;
+
+    }
+    h3{
+    
+      
+        
+        font-size: 2rem;
+        margin-bottom: 10px;
+       
+    }
+    .cont-title{
+        width: 350px;
+    }
+    p{
+        
+        margin-bottom: 0.2rem;
+        font-size: 1.15rem;
+        
+    }
+    
+}

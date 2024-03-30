@@ -35,3 +35,9 @@
     background-color: var(--ligth-green);
     margin: 0px auto;
 }
+@media only screen and (max-width: 768px){
+    .side-navbar-left{
+    
+        display: none;
+    }
+}

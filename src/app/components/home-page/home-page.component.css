@@ -35,3 +35,19 @@ app-footer{
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 768px){
+    app-footer,app-proyects-section{
+        width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .cont-section{
+        align-items: center;
+       
+    }
+    app-my-section{
+        width: 350px;
+    }
+    
+}
