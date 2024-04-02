@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Location } from '@angular/common';
+import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-proyects-section',
@@ -21,7 +22,12 @@ import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren } 
   
   ]
 })
-export class ProyectsSectionComponent {
+export class ProyectsSectionComponent implements OnInit  {
+
+  ngOnInit() {
+    // Ajusta el pageURL para el proyecto que desees
+    this.proyectos[2].pageURL = window.location.href; // Esto establecerá la URL actual de la página
+  }
 
   mostrarDescripcion: boolean = false;
 
@@ -45,7 +51,7 @@ export class ProyectsSectionComponent {
     title: 'Nerflis',
     description: 'Esta plataforma es un servicio de streaming desarrollado en Java y JSON, que ofrece a los usuarios acceso a un extenso catálogo de películas y series.',
     lengList: ['Java', 'JSON'],
-    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg',
+    imagenUrl: 'assets/images/albumize-final.jpg',
     gitURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III',
     pageURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III'
   },
@@ -53,16 +59,18 @@ export class ProyectsSectionComponent {
     title: 'Mi Portfolio',
     description: 'Portfolio personal creado utilizando tecnologías modernas como Angular, CSS, HTML y TypeScript. Este portfolio es una muestra de mi trabajo y experiencia en el desarrollo web. ',
     lengList: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-    imagenUrl: 'assets/images/albumize-nonav-cuad.jpg',
+    imagenUrl: 'assets/images/pr-full.jpg',
     gitURL:'https://github.com/EnzoBerrutti/Portfolio',
-    pageURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III'
+    pageURL:''
   }
 
 
 ];
+
+
 @ViewChildren('projectItem') projectItems!: QueryList<ElementRef>;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2,location: Location) {}
 
   ngAfterViewInit(): void {
     const options = {

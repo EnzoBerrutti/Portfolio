@@ -1,6 +1,9 @@
 <nav class="cont-all" [ngClass]="{ 'show-navbar': isScrolledUp }">
 
-    <div class="octagono"><span>E</span></div>
+    <div class="octagono">
+        <a href=""><img src="assets\icons\logo-edit.png" alt=""></a>
+        
+    </div>
 
     <div class="container-nav">
         <div class="list-nav" >
@@ -8,7 +11,7 @@
             <a [ngClass]="{ 'active': currentSection === 'project' }" (click)="scrollTo('project')" class="btns"><i class="fa-regular fa-circle"></i>Proyectos</a>
             <a [ngClass]="{ 'active': currentSection === 'aboutme' }" (click)="scrollTo('aboutme')" class="btns"><i class="fa-regular fa-circle"></i>Sobre mí</a>
             
-            <a class="btns-2" href="mailto:enzo.berrutti@gmail.com">Contacto</a>
+            <a class="contact-button" href="mailto:enzo.berrutti@gmail.com">Contacto</a>
         </div>
     </div>
    

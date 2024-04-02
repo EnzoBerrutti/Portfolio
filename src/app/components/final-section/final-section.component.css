@@ -56,6 +56,62 @@ p{
     font-family: "Rajdhani", sans-serif;
     text-align: center;
 }
+.contact-button{
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.3rem;
+    color: rgb(94 234 212);
+    width: 150px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+    border-radius: 3px;
+    border: 1px solid var(--ligth-green);
+    
+
+}
+.contact-button:hover{
+    border: 0px solid #070d1b;
+}
+.contact-button:hover::before{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top: 1px solid var(--ligth-green);
+    border-right: 1px solid var(--ligth-green);
+    border-radius: 3px;
+    animation: border-top-right 1.5s infinite alternate;
+}
+.contact-button:hover::after {
+    content: "";
+    position: absolute;
+    right:0;
+    border-radius: 3px;
+    bottom:0;
+    width: 0;
+    height: 0;
+    border-bottom:1px solid var(--ligth-green);
+    border-left: 1px solid var(--ligth-green);
+    animation: border-bottom-left 1.5s infinite alternate;
+}
+ 
+  @keyframes border-bottom-left {
+    0%    {width:150px;   height:100%;}
+    25%   {width:150px; height:100%;}
+    50%   {width:150px; height:0px;}
+    100%  {width:0px; height:0px;}
+  }
+  @keyframes border-top-right {
+    0%    {width:150px;   height:100%;}
+    25%   {width:150px; height:100%;}
+    50%   {width:150px; height:0px;}
+    100%  {width:0px; height:0px;}
+  }
 .btns-2{
    
     color: rgb(94 234 212);

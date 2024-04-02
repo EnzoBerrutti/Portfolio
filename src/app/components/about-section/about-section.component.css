@@ -98,18 +98,56 @@ h2::after{
     font-family: "Rajdhani", sans-serif;
     
     
+    
 }
 .desc-about-2{
     
     font-size: 1.2rem;
     margin-bottom: 1rem;
+   
     font-family: "Rajdhani", sans-serif;
    
     
 }
+ .container-list{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 1rem;
+    
+}
+.flex-list{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55px;
+    
+
+
+}
+.list-tec{
+    font-size: 1rem;
+    font-family: "Rajdhani", sans-serif;
+    margin-bottom: 2rem;
+    
+    padding: 0;
+    margin: 0;
+
+    
+} 
+
+
+.fa-chevron-right{
+    color: var(--ligth-green);
+    vertical-align:middle;
+    font-size: 0.8rem;
+    margin-right: 6px;
+
+}
 .years-info{
     display: flex;
-    width: 100%;
+    width: 400px;
     justify-content: space-between;
 }
 span{
@@ -126,6 +164,79 @@ span{
     font-weight: bold;
     color: var(--light-white);
 }
+.contact-button{
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.3rem;
+    color: rgb(94 234 212);
+    width: 180px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+    border-radius: 3px;
+    border: 1px solid var(--ligth-green);
+
+    margin-top: 2rem;
+    cursor: pointer;
+    
+
+}
+.contact-button:hover{
+    border: 0px solid #070d1b;
+}
+.contact-button:hover::before{
+    content: "";
+    position: absolute;
+    left:0px;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top: 1px solid var(--ligth-green);
+    border-right: 1px solid var(--ligth-green);
+    border-radius: 3px;
+    animation: border-top-right 1.5s infinite alternate;
+}
+.contact-button:hover::after {
+    content: "";
+    position: absolute;
+    right:0;
+    border-radius: 3px;
+    bottom:0;
+    width: 0;
+    height: 0;
+    border-bottom:1px solid var(--ligth-green);
+    border-left: 1px solid var(--ligth-green);
+    animation: border-bottom-left 1.5s infinite alternate;
+}
+  /* @keyframes border-bottom-left {
+    0%    {width:0px;   height:0px; opacity: 0;}
+    50%   {width:0px;   height:0px; opacity: 0;}
+    50.1% {width:0px;   height:0px; opacity: 1;}
+    75%   {width:200px; height:0px; opacity: 1;}
+    100%  {width:200px; height:49px;opacity: 1;}
+  }
+  @keyframes border-top-right {
+    0%    {width:0px;   height:0px;}
+    25%   {width:200px; height:0px;}
+    50%   {width:200px; height:48px;}
+    100%  {width:200px; height:48px;}
+  } */
+  @keyframes border-bottom-left {
+    0%    {width:180px;   height:100%;}
+    25%   {width:180px; height:100%;}
+    50%   {width:180px; height:0px;}
+    100%  {width:0px; height:0px;}
+  }
+  @keyframes border-top-right {
+    0%    {width:180px;   height:100%;}
+    25%   {width:180px; height:100%;}
+    50%   {width:180px; height:0px;}
+    100%  {width:0px; height:0px;}
+  }
+
 
 button{
     font-family: 'Ignis et Glacies Sharp', sans-serif;
@@ -145,6 +256,7 @@ button:hover{
 
 .fa-download{
     font-size: 1rem;
+    margin-left: 1rem;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
@@ -287,6 +399,11 @@ button:hover{
         
         
     }
+    .years-info{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
     .info-data{
         
         font-size: 1rem;
@@ -298,6 +415,43 @@ button:hover{
         border: 1px solid var(--ligth-green);
         border-radius: 3px;
         
+    }
+
+    .container-list{
+        display: flex;
+        justify-content: space-between;
+        width: 350px;
+        margin-bottom: 1rem;
+        
+    }
+    .flex-list{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 55px;
+        
+    
+    
+    }
+    .list-tec{
+        font-size: 1rem;
+        font-family: "Rajdhani", sans-serif;
+        margin-bottom: 2rem;
+        
+        padding: 0;
+        margin: 0;
+    
+        
+    } 
+    
+    
+    .fa-chevron-right{
+        color: var(--ligth-green);
+        vertical-align:middle;
+        font-size: 0.8rem;
+        margin-right: 6px;
+    
     }
 
 

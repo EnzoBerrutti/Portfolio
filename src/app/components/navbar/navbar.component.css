@@ -101,30 +101,74 @@ a:hover{
 }
 .octagono{
     margin-left: 40px;
-    margin-top: 15px;
+    margin-top: 22px;
    
 
 }
-
-span{
-    font-family: 'Ignis et Glacies Sharp', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
+.contact-button{
+    font-family: "Rajdhani", sans-serif;
+    
     color: rgb(94 234 212);
-    /* background-image: linear-gradient(to left, #229b8c, #32ae9e, #41c2af, #50d6c2, #5eead4); */
-    /* background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -moz-text-fill-color:transparent; */  
+    font-size: 17px;
+    font-weight: 400;
+    
+
+    width: 87.73333px;
+    height: 43.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    border-radius: 3px;
+    border: 1px solid var(--ligth-green);
+    
+
 }
+.contact-button:hover{
+    border: 0px;
+}
+.contact-button:hover::before{
+    content: "";
+    position: absolute;
+    left:0px;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top: 1px solid var(--ligth-green);
+    border-right: 1px solid var(--ligth-green);
+    border-radius: 3px;
+    animation: border-top-right 1.5s infinite alternate;
+}
+.contact-button:hover::after {
+    content: "";
+    position: absolute;
+    right:0;
+    border-radius: 3px;
+    bottom:0;
+    width: 0;
+    height: 0;
+    border-bottom:1px solid var(--ligth-green);
+    border-left: 1px solid var(--ligth-green);
+    animation: border-bottom-left 1.5s infinite alternate;
+}
+
+  @keyframes border-bottom-left {
+    0%    {width:87.73333px;   height:100%;}
+    25%   {width:87.73333px; height:100%;}
+    50%   {width:87.73333px; height:0px;}
+    100%  {width:0px; height:0px;}
+  }
+  @keyframes border-top-right {
+    0%    {width:87.73333px;   height:100%;}
+    25%   {width:87.73333px; height:100%;}
+    50%   {width:87.73333px; height:0px;}
+    100%  {width:0px; height:0px;}
+  }
+
+
 img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 0.5rem;
-    background-color: rgb(94 234 212);
-    border: 1px solid rgb(94 234 212);
+    width:25px;
 }
 .container-button{
     width: 33.33%;
@@ -148,8 +192,34 @@ button{
     
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .container-nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    
+    }
+    .fa-circle{
+        font-size: 8px;
+        margin-right: 6px;
+        vertical-align: middle;
+        color: var(--ligth-green);
+    
+    
+    }
+    .btns{
+        color: var(--light-white);
+        font-family: "Rajdhani", sans-serif;
+        padding: 0.75rem 1rem;
+        margin-right: 2px;
+        font-size: 17px;
+        font-weight: 400;
+     
+    }
 
-@media only screen and (min-width: 768px) and (max-width: 1366px) {
+}
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
     .container-nav{
         width: 100%;
         display: flex;

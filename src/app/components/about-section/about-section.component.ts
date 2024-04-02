@@ -31,5 +31,16 @@ export class AboutSectionComponent implements AfterViewInit{
   }
 
 
+  downloadFile() {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'assets/pdf/CV-SPR.pdf');
+    link.setAttribute('download', 'CV-SPR.pdf');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
+
 
 }
