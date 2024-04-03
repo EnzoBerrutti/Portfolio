@@ -36,25 +36,49 @@ app-footer{
     justify-content: center;
 }
 
-@media only screen and (max-width: 768px){
-    app-footer,app-proyects-section{
+@media only screen and (max-width: 767px){
+    app-footer{
         width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    app-proyects-section{
+        width: 100%;
         display: flex;
         justify-content: center;
     }
     .cont-section{
         align-items: center;
+        width: 100%;
        
     }
     app-my-section{
-        width: 350px;
+        width: 100%;
     }
     
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px){
     app-proyects-section{
-        width: 750px;
+        width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .cont-section{
+        display: flex;
+        justify-content: center;
+    }
+    app-navbar{
+        display: flex;
+        justify-content: center;
+    }
+    app-my-section{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .cont-section{
+        width: 100%;
+        
     }
 }

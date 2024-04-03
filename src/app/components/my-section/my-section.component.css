@@ -338,6 +338,20 @@ ng-tag-canvas{
 
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .my-sect {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+     
+    }
+    .cont-desc{
+        width: 100%;
+        
+        
+        
+    }
     .hola{
         color: var(--ligth-green);
         font-family: "Rajdhani", sans-serif;
@@ -463,20 +477,20 @@ ng-tag-canvas{
     
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     .my-sect {
         padding-top: 0;
         display: flex;
         justify-content: center;
-        width: 350px;
+        width: 100%;
         
      
     }
     .cont-desc{
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         
         
@@ -494,7 +508,7 @@ ng-tag-canvas{
     .name-enzo{
         
         font-size: 3.5rem;
-        width:350px;
+        width:100%;
 
     
         margin-left: -3.5px;
@@ -518,11 +532,11 @@ ng-tag-canvas{
         padding: 0;
         text-wrap: balance;
         
-        max-width: 350px;
+        width: 95%;
     }
     .contact-cv{
         display: flex;
-        width: 350px;
+        width:100%;
         margin-top: 1rem;
         margin-bottom: 1rem;
         padding: 0;

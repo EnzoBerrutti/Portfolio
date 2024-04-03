@@ -51,7 +51,7 @@ export class ProyectsSectionComponent implements OnInit  {
     title: 'Nerflis',
     description: 'Esta plataforma es un servicio de streaming desarrollado en Java y JSON, que ofrece a los usuarios acceso a un extenso catálogo de películas y series.',
     lengList: ['Java', 'JSON'],
-    imagenUrl: 'assets/images/albumize-final.jpg',
+    imagenUrl: 'assets/images/nerflis-pho.jpg',
     gitURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III',
     pageURL:'https://github.com/EnzoBerrutti/Proyecto-Final-Lab-III'
   },

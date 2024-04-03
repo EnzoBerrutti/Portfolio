@@ -87,11 +87,11 @@ h2::after{
 }
 .imagen-izquierda .cont-image {
     width: 60%;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .imagen-izquierda img{
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
 .imagen-izquierda .title-desc{
@@ -177,11 +177,11 @@ h2::after{
     
 .imagen-derecha .cont-image {
     width: 60%;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .imagen-derecha .cont-image img{
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
   
@@ -257,7 +257,7 @@ h6{
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
     .sect-project{
     
-        width:750px;
+        width:90%;
         display: flex;
         justify-content: center;
         
@@ -266,37 +266,44 @@ h6{
     .container-title{
    
         
-        width: 750px;
+        width: 100%;
         
       
+    }
+    h2::after{
+        
+        width: 232.933px;
+        
+        
+        
     }
     .imagen-izquierda{
     
         display: flex;
         
-        width: 750px;
+        width: 100%;
         margin-bottom: 6rem;
         
         position: relative;
     }
     .imagen-derecha{
         display: flex;
-        width: 750px;
+        width: 100%;
         margin-bottom: 6rem;
         position: relative;
     }
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     .sect-project{
     
-        width: 350px;
+        width: 90%;
         
     
     }
     .container-title{
    
         
-        width: 350px;
+        width: 100%;
         
       
     }
